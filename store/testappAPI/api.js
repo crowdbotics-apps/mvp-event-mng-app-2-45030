@@ -12,6 +12,15 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return testappAPI.post(`/api/v1/signup/`, payload)
 }
+function modules_flag_user_content_choice_list_retrieve(payload) {
+  return testappAPI.get(`/modules/flag-user-content/choice-list/`)
+}
+function modules_flag_user_content_create_report_create(payload) {
+  return testappAPI.post(`/modules/flag-user-content/create-report/`)
+}
+function modules_flag_user_content_reported_list_retrieve(payload) {
+  return testappAPI.get(`/modules/flag-user-content/reported-list/`)
+}
 function modules_payments_get_payments_history_retrieve(payload) {
   return testappAPI.get(`/modules/payments/get_payments_history/`)
 }
@@ -58,6 +67,9 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  modules_flag_user_content_choice_list_retrieve,
+  modules_flag_user_content_create_report_create,
+  modules_flag_user_content_reported_list_retrieve,
   modules_payments_get_payments_history_retrieve,
   modules_payments_get_payments_methods_retrieve,
   modules_payments_payment_sheet_create,
